@@ -1,11 +1,11 @@
-local util = require("onedark.util")
+local util = require 'onedark.util'
 
 local M = {}
 
 function M.kitty(config)
-  config = config or require("onedark.config")
+  config = config or require 'onedark.config'
   config.transform_colors = true
-  local colors = require("onedark.colors").setup(config)
+  local colors = require('onedark.colors').setup(config)
 
   local kitty = util.template(
     [[

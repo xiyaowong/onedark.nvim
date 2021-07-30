@@ -1,5 +1,5 @@
-local config = require("onedark.config")
-local colors = require("onedark.colors").setup(config)
+local config = require 'onedark.config'
+local colors = require('onedark.colors').setup(config)
 
 local onedark = {}
 
@@ -31,7 +31,7 @@ onedark.replace = {
 
 onedark.inactive = {
   a = { bg = colors.bg_statusline, fg = colors.blue },
-  b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
+  b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = 'bold' },
   c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
 }
 

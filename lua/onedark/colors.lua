@@ -1,40 +1,40 @@
-local util = require("onedark.util")
+local util = require 'onedark.util'
 
 local M = {}
 
 ---@param config Config
 ---@return ColorScheme
 function M.setup(config)
-  config = config or require("onedark.config")
+  config = config or require 'onedark.config'
 
   -- Color Palette
   ---@class ColorScheme
   local colors = {}
 
   colors = {
-    none = "NONE",
-    bg = "#282c34",
+    none = 'NONE',
+    bg = '#282c34',
     bg2 = '#21252b',
     bg_visual = '#393f4a',
     border = '#646e82',
-    bg_highlight = "#242b38",
-    fg = "#abb2bf",
-    fg_light = "#adbac7",
-    fg_dark = "#798294",
-    fg_gutter = "#5c6370",
-    dark5 = "#abb2bf",
-    blue = "#61afef",
-    cyan = "#56b6c2",
-    purple = "#c678dd",
-    orange = "#d19a66",
-    yellow = "#e0af68",
-    yellow2 = "#e2c08d",
+    bg_highlight = '#242b38',
+    fg = '#abb2bf',
+    fg_light = '#adbac7',
+    fg_dark = '#798294',
+    fg_gutter = '#5c6370',
+    dark5 = '#abb2bf',
+    blue = '#61afef',
+    cyan = '#56b6c2',
+    purple = '#c678dd',
+    orange = '#d19a66',
+    yellow = '#e0af68',
+    yellow2 = '#e2c08d',
     bg_yellow = '#ebd09c',
-    green = "#98c379",
-    red = "#e86671",
-    red1 = "#f65866",
-    git = { change = "#e0af68", add = "#109868", delete = "#9A353D", conflict = "#bb7a61" },
-    gitSigns = { change = "#e0af68", add = "#109868", delete = "#9A353D" },
+    green = '#98c379',
+    red = '#e86671',
+    red1 = '#f65866',
+    git = { change = '#e0af68', add = '#109868', delete = '#9A353D', conflict = '#bb7a61' },
+    gitSigns = { change = '#e0af68', add = '#109868', delete = '#9A353D' },
   }
 
   util.bg = colors.bg
@@ -53,7 +53,7 @@ function M.setup(config)
   }
 
   colors.git.ignore = colors.fg_gutter
-  colors.black = util.darken(colors.bg, 0.8, "#000000")
+  colors.black = util.darken(colors.bg, 0.8, '#000000')
   colors.border_highlight = colors.blue
 
   -- Popups and statusline always get a dark background

@@ -1,5 +1,5 @@
-local util = require("onedark.util")
-local theme = require("onedark.theme")
+local util = require 'onedark.util'
+local theme = require 'onedark.theme'
 
 local M = {}
 

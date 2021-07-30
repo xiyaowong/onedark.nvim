@@ -1,16 +1,16 @@
-local util = require("onedark.util")
+local util = require 'onedark.util'
 
 local M = {}
 
 function M.alacritty(config)
-  config = config or require("onedark.config")
+  config = config or require 'onedark.config'
   config.transform_colors = true
-  local colors = require("onedark.colors").setup(config)
+  local colors = require('onedark.colors').setup(config)
 
   local alacrittyColors = {}
   for k, v in pairs(colors) do
-    if type(v) == "string" then
-      alacrittyColors[k] = v:gsub("^#", "0x")
+    if type(v) == 'string' then
+      alacrittyColors[k] = v:gsub('^#', '0x')
     end
   end
 
